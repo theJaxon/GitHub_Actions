@@ -1,0 +1,15 @@
+name: First workflow
+
+# Triggering event
+# workflow_dispatch makes sure that you can manually trigger that workflow
+on: workflow_dispatch
+
+jobs:
+  first_job:
+    # runs-on specifies the environment to be used
+    runs-on: ubuntu-latest
+    steps:
+      - name: Print Hola
+        run: echo "HOLA"
+      - name: Print adios
+        run: echo "ADIOS"
