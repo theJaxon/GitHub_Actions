@@ -8,12 +8,12 @@ jobs:
         working-directory: react-app
     steps:
     - name: Download the code
-      uses: actions/checkout
+      uses: actions/checkout@v3
       with:
         repository: ${{ github.repository }}
 
     - name: Install NodeJS
-      uses: actions/setup-node
+      uses: actions/setup-node@v3
       with:
         node-version: 18
 
