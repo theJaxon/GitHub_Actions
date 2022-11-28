@@ -1,0 +1,24 @@
+name: React Test
+on: push
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: react-app
+    steps:
+    - name: Download the code
+      uses: actions/checkout
+      with:
+        repository: ${{ github.repository }}
+
+    - name: Install NodeJS
+      uses: actions/setup-node
+      with:
+        node-version: 18
+
+    - name: Install dependencies
+      run: npm ci
+
+    - name: Run Tests
+      run: npm test
