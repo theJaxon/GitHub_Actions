@@ -11,6 +11,7 @@ Learning about GitHub Actions for CI Workflows
 - Defines a **Runner** (An execution Environment that can be either Mac, Windows or Linux)
 - Jobs by default **Run in Parallel** (Unless it's specified otherwise)
 - Can be conditionally executed
+- A Job can contain the **`needs`** keyword to indicate it relies on another job (So that the execution become sequential)
 
 #### Steps
 - Execute a **`Shell Script` or an `Action`**
