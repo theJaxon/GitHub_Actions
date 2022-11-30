@@ -35,7 +35,17 @@ Learning about GitHub Actions for CI Workflows
   10. Workflow is scheduled (schedule)
   11. Workflow is called by other workflows (workflow_call)
 
+- There can be multiple triggers defined ex: `on: [push, workflow_dispatch]
+
 ---
 
 ### Actions
 - An action is a custom application that performs a frequently repeated task
+
+### [Contexts](https://docs.github.com/en/actions/learn-github-actions/contexts)
+- Reserved keywords for accessing information about workflows
+- Syntax used is `${{ <context> }}`
+
+### [Expressions](https://docs.github.com/en/actions/learn-github-actions/expressions)
+- Can be used to programmatically set environment variables in workflow files and access contexts
+- Example `run: echo "${{ toJSON(github) }}"`
