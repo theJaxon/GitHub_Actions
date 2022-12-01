@@ -37,6 +37,14 @@ Learning about GitHub Actions for CI Workflows
 
 - There can be multiple triggers defined ex: `on: [push, workflow_dispatch]
 
+#### Activity Types
+- More detailed control over when a workflow will be triggered
+- So you specify fine grained details like `pull_request` (opened, closed, edited)
+
+#### Filters
+- Give more detailed control over when a workflow will be triggerd just like Activity Types
+- ex: on `push` to specific branch
+
 ---
 
 ### Actions
