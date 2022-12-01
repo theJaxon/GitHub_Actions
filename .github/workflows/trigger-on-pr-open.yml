@@ -9,7 +9,7 @@ jobs:
     runs-on: ubuntu-latest
     defaults:
       run:
-        working-directory: react-app
+        working-directory: /home/runner/work/GitHub_Actions/react-app
     steps:
       - name: Output event data
         run: echo "${{ toJSON(github.event) }}"
