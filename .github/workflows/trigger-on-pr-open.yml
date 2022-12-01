@@ -9,10 +9,15 @@ jobs:
     runs-on: ubuntu-latest
     defaults:
       run:
-        working-directory: /home/runner/work/GitHub_Actions/react-app
+        working-directory: react-app
     steps:
       - name: Output event data
         run: echo "${{ toJSON(github.event) }}"
+
+      - name: Download the code
+        uses: actions/checkout@v3
+        with:
+          repository: theJaxon/GitHub_Actions
 
       - name: Get code
         uses: actions/checkout@v3
