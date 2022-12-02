@@ -1,5 +1,9 @@
 name: Deploy
-on: push
+on: 
+  push:
+    paths-ignore:
+    - '.github/workflows/*'
+    - 'README.md'
 jobs:
   test:
     runs-on: ubuntu-latest
