@@ -24,7 +24,7 @@ Learning about GitHub Actions for CI Workflows
 - The Type of event that causes the action to be triggered
 - Can be for a reason like
   1. New commit (push)
-  2. PR Created (pull_request)
+  2. PR Created (pull_request) *NOTE: PRs based on Forks DO NOT Trigger a workflow
   3. New branch (create)
   4. New Repo Fork created (fork)
   5. New Issue opened (issues)
@@ -36,6 +36,19 @@ Learning about GitHub Actions for CI Workflows
   11. Workflow is called by other workflows (workflow_call)
 
 - There can be multiple triggers defined ex: `on: [push, workflow_dispatch]
+
+```yaml
+# Trigger whenever a PR is created that target any of these branches
+name: Test PR
+on:
+  pull_request:
+    types:
+    - opened
+    branches:
+    - main
+    - 'dev-*'
+    - 'feature/*'
+```
 
 #### Activity Types
 - More detailed control over when a workflow will be triggered
