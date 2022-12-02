@@ -50,6 +50,12 @@ on:
     - 'feature/*'
 ```
 
+---
+
+### [Skip workflow runs via Commit messages](https://docs.github.com/en/actions/managing-workflow-runs/skipping-workflow-runs)
+- Workflow runs triggered by the push and pull_request events can be skipped by including a command in commit message
+- ex `[skip ci]` `[skip actions]`
+
 #### Activity Types
 - More detailed control over when a workflow will be triggered
 - So you specify fine grained details like `pull_request` (opened, closed, edited)
