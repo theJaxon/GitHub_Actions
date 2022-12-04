@@ -42,7 +42,7 @@ jobs:
         with:
           name: artifacts
           path: |
-            dist
-            package.json
+            practice-app/dist
+            practice-app/package.json
 
 
