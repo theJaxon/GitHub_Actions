@@ -84,8 +84,17 @@ on:
 - Can be Downloaded and used manually via Github UI or REST API
 - Can be downloaded and used by some other jobs 
 
-### Job Outputs
+### [Job Outputs](https://docs.github.com/en/enterprise-server@3.4/actions/using-workflows/workflow-commands-for-github-actions)
 - For re-using a value in different jobs (ex: file name generated in a previous build step)
+- `set-output` is usually combined with `echo` command for storing the echo output ex: `::set-output name=script-file::`
+- `needs` contains the outputs for all jobs
+
+---
+
+### Caching actions
+- Relies on cache action
+- A Path is provided where the files located there are to be cached
+- A `Key` is constructed preferably with the hash of a specifc file so that based on changes in that file it's detected that cache should be invalidated
 
 ---
 
