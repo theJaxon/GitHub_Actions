@@ -103,3 +103,11 @@ on:
 # Run specific Workflow
 act -W .github/workflows/checks.yml
 ```
+
+---
+
+### Custom Actions
+#### Types of custom actions
+1. JavaScript Actions - Execute JS File
+2. Docker Actions - Create Dockerfile with required configuration
+3. Composite Actions - Combine multiple workflow steps in 1 single action (`run commands` and `uses actions`) which allows for re-using shared steps
